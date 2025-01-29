@@ -17,7 +17,7 @@ $no = 1;
 	<link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-	<div class="container bg-light">
+	
 		<!-- top bar -->
 		<div class="logo clearfix">
 			<div class="float-left mt-3 mb-3">
@@ -63,9 +63,7 @@ $no = 1;
 			</div>
 			<?php require 'sidebar.php'; ?>
 		</div>
-		<div class="text-white footer">
-			2019 © Copyright by Fakhrul Fanani Nugroho.
-		</div>
+		<?php require 'footer.php'; ?>
 	</div>
 
 	<script src="resources/js/jquery.js"></script>

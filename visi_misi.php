@@ -17,7 +17,7 @@ $aktif = 'visi_misi';
 	<link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-	<div class="container bg-light">
+
 		<!-- top bar -->
 		<div class="logo clearfix">
 			<div class="float-left mt-3 mb-3">

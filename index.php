@@ -2,7 +2,7 @@
 
 require_once 'koneksi.php';
 $query = mysqli_query($koneksi, "SELECT * FROM tbl_artikel");
-
+$queryPrestasi = mysqli_query($koneksi, "SELECT * FROM tbl_artikel WHERE id_kategori = '12' LIMIT 5");
 $aktif = 'home';
 ?>
 <!DOCTYPE html>
@@ -16,13 +16,13 @@ $aktif = 'home';
 	<link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-	<div class="container bg-light">
+
 		<!-- top bar -->
 		<div class="logo clearfix">
 			<div class="float-left mt-3 mb-3">
 				<img src="resources/images/logo.png" alt="Logo Sekolah" width="70px" class="float-left mr-3">
 				<div class="text float-right">
-					<span class="smk">SMK Negeri 1 Wanareja</span><br>
+					<span class="smk">SD N 2 SUMBER BAHAGIA</span><br>
 					<span class="visi">Mewujudkan SMK Berkarakter, Berkompeten dan Unggul.</span>
 				</div>
 			</div>
@@ -86,108 +86,226 @@ $aktif = 'home';
 			<?php require_once 'sidebar.php'; ?>
 		</div>
 
-	</div>
-
-	<footer class="footer bg-gradient-dark text-white py-5">
-    <div class="container">
-        <!-- Logo dan Nama Sekolah -->
-        <div class="row text-center mb-4">
-            <div class="col-12">
-                <img src="resources/images/logo.png" alt="Logo Sekolah" width="80" class="mb-3">
-                <h5 class="text-uppercase font-weight-bold">SMK Negeri 1 Wanareja</h5>
-                <p class="mb-0">Mewujudkan SMK Berkarakter, Berkompeten, dan Unggul</p>
-            </div>
+        <div class="row p-3">
+    <div class="col-md-8">
+        <div class="title mb-3">
+            Prestasi Terbaru
         </div>
-
-        <!-- Konten Footer -->
-        <div class="row">
-            <!-- Tentang Sekolah -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5 class="text-uppercase font-weight-bold mb-3">Tentang Kami</h5>
-                <p style="text-align: justify;">
-                    SMK Negeri 1 Wanareja berkomitmen mencetak generasi yang siap kerja, berkarakter, dan unggul. Kami hadir untuk memberikan pendidikan berkualitas kepada siswa-siswi.
-                </p>
+        <?php while ($prestasi = mysqli_fetch_assoc($queryPrestasi)) : ?>
+        <div class="artikel">
+            <div class="info">
+                <div class="post mb-2">
+                    <span class="tgl"><?= date('d M y', strtotime($prestasi['tanggal'])) ?></span>
+                    <span class="judul"><a href="detail_artikel.php?id=<?= $prestasi['id'] ?>"><?= $prestasi['judul'] ?></a></span>
+                </div>
             </div>
-
-            <!-- Navigasi Cepat -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5 class="text-uppercase font-weight-bold mb-3">Navigasi Cepat</h5>
-                <ul class="list-unstyled">
-                    <li><a href="index.php" class="text-white text-decoration-none d-block mb-2">Beranda</a></li>
-                    <li><a href="tentang.php" class="text-white text-decoration-none d-block mb-2">Tentang Kami</a></li>
-                    <li><a href="kontak.php" class="text-white text-decoration-none d-block mb-2">Kontak</a></li>
-                    <li><a href="artikel.php" class="text-white text-decoration-none d-block mb-2">Artikel</a></li>
-                </ul>
+            <div class="detail">
+                <div class="clearfix" style="text-align: justify;">
+                    <img src="images/artikel/<?= $prestasi['foto'] ?>" alt="" width="200px" class="float-left mr-2">
+                    <?= substr($prestasi['isi'], 0, 150) . '...' ?>
+                </div>
             </div>
+            <hr>
+        </div>
+        <?php endwhile; ?>
+    </div>
 
-            <!-- Hubungi Kami -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5 class="text-uppercase font-weight-bold mb-3">Hubungi Kami</h5>
-                <p><i class="fas fa-map-marker-alt"></i> Jl. Raya Wanareja No. 123, Cilacap</p>
-                <p><i class="fas fa-phone"></i> (0280) 123-456</p>
-                <p><i class="fas fa-envelope"></i> info@smk1wanareja.sch.id</p>
-                <div>
-                    <a href="#" class="text-white me-2 social-icon"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="text-white me-2 social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-white me-2 social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-white social-icon"><i class="fab fa-youtube"></i></a>
+
+    <div class="ekstrakurikuler bg-white p-4 mb-4">
+    <h3 class="mb-4 text-center">Daftar Ekstrakurikuler</h3>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100 text-center ekskul-card">
+                <div class="card-body">
+                    <i class="fas fa-campground fa-3x mb-3 text-primary"></i>
+                    <h5 class="card-title">Pramuka</h5>
+                    <p class="card-text">Melatih kedisiplinan, keterampilan, dan kepemimpinan siswa.</p>
                 </div>
             </div>
         </div>
-
-        <!-- Copyright -->
-        <div class="text-center mt-4">
-            <p class="mb-0">2019 - <?= date('Y') ?> © SMK Negeri 1 Wanareja. All Rights Reserved.</p>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100 text-center ekskul-card">
+                <div class="card-body">
+                    <i class="fas fa-flag fa-3x mb-3 text-danger"></i>
+                    <h5 class="card-title">Paskibra</h5>
+                    <p class="card-text">Ekstrakurikuler pengibar bendera untuk melatih rasa cinta tanah air.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100 text-center ekskul-card">
+                <div class="card-body">
+                    <i class="fas fa-basketball-ball fa-3x mb-3 text-warning"></i>
+                    <h5 class="card-title">Basket</h5>
+                    <p class="card-text">Meningkatkan kemampuan olahraga basket dan teamwork.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100 text-center ekskul-card">
+                <div class="card-body">
+                    <i class="fas fa-user-ninja fa-3x mb-3 text-dark"></i>
+                    <h5 class="card-title">Karate</h5>
+                    <p class="card-text">Mengembangkan kemampuan bela diri dan kedisiplinan.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100 text-center ekskul-card">
+                <div class="card-body">
+                    <i class="fas fa-flask fa-3x mb-3 text-success"></i>
+                    <h5 class="card-title">Karya Ilmiah Remaja (KIR)</h5>
+                    <p class="card-text">Mengasah kemampuan siswa dalam penelitian ilmiah.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100 text-center ekskul-card">
+                <div class="card-body">
+                    <i class="fas fa-music fa-3x mb-3 text-info"></i>
+                    <h5 class="card-title">Musik</h5>
+                    <p class="card-text">Mengembangkan bakat siswa dalam seni musik.</p>
+                </div>
+            </div>
         </div>
     </div>
-</footer>
+</div>
 
-<!-- Tambahkan Font Awesome untuk ikon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-<!-- Tambahkan CSS untuk efek hover dan responsif -->
 <style>
-    .footer {
-        background: linear-gradient(135deg, #0a0a0a, #333);
-        color: #fff;
+    .ekskul-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .footer img {
-        border-radius: 50%;
+    .ekskul-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     }
-
-    .footer a {
-        transition: all 0.3s ease;
-    }
-
-    .footer a:hover {
-        color: #f39c12;
-        text-decoration: underline;
-    }
-
-    .footer .social-icon {
-        font-size: 20px;
+    .card-body i {
         transition: transform 0.3s ease;
     }
-
-    .footer .social-icon:hover {
-        transform: scale(1.2);
-    }
-
-    .footer h5 {
-        font-weight: 600;
-    }
-
-    .footer p {
-        font-size: 14px;
-    }
-
-    @media (max-width: 767px) {
-        .footer .social-icon {
-            font-size: 18px;
-        }
+    .ekskul-card:hover i {
+        transform: rotate(10deg);
     }
 </style>
+
+<!-- Tambahkan FontAwesome untuk ikon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</div>
+<div class="infografis bg-light py-5">
+    <div class="container text-center">
+        <h3 class="mb-4 font-weight-bold">Perbandingan Jumlah Siswa dan Guru Aktif</h3>
+        <div class="row justify-content-center">
+            <!-- Kartu Siswa Aktif -->
+            <div class="col-md-5 mb-4">
+                <div class="card shadow-sm p-4 text-center info-card">
+                    <i class="fas fa-user-graduate fa-5x text-primary mb-3"></i>
+                    <h2 class="counter display-4" data-target="1200">0</h2>
+                    <p class="text-muted">Siswa Aktif</p>
+                </div>
+            </div>
+            <!-- Tanda VS -->
+            <div class="col-md-2 mb-4 d-flex align-items-center justify-content-center">
+                <div class="d-flex flex-column align-items-center">
+                    <span class="h1 text-muted">VS</span>
+                </div>
+            </div>
+            <!-- Kartu Guru Aktif -->
+            <div class="col-md-5 mb-4">
+                <div class="card shadow-sm p-4 text-center info-card">
+                    <i class="fas fa-chalkboard-teacher fa-5x text-success mb-3"></i>
+                    <h2 class="counter display-4" data-target="80">0</h2>
+                    <p class="text-muted">Guru Aktif</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="chart-container">
+                    <canvas id="studentTeacherChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .info-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px;
+        padding: 20px;
+    }
+    .info-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .counter {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #333;
+    }
+    .chart-container {
+        max-width: 600px;
+        margin-top: 30px;
+    }
+    .font-weight-bold {
+        font-weight: 700;
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js"></script>
+<script>
+    // Animasi Counter Number
+    document.addEventListener("DOMContentLoaded", function () {
+        const counters = document.querySelectorAll(".counter");
+        counters.forEach(counter => {
+            counter.innerText = "0";
+            const updateCounter = () => {
+                const target = +counter.getAttribute("data-target");
+                const count = +counter.innerText;
+                const increment = target / 100;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCounter, 10);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCounter();
+        });
+    });
+
+    // Chart.js untuk Visualisasi Perbandingan
+    const ctx = document.getElementById('studentTeacherChart').getContext('2d');
+    const studentTeacherChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Siswa Aktif', 'Guru Aktif'],
+            datasets: [{
+                label: 'Jumlah',
+                data: [1200, 80],
+                backgroundColor: ['#3498db', '#2ecc71'],
+                borderColor: ['#2980b9', '#27ae60'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 1300
+                }
+            }
+        }
+    });
+</script>
+
+<!-- Tambahkan FontAwesome untuk ikon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<?php require_once 'footer.php'; ?>
+  
+
 
 	<script src="resources/js/jquery.js"></script>
 	<script src="resources/js/bootstrap.min.js"></script>

@@ -7,13 +7,13 @@ $aktif = 'bukutamu';
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Buku Tamu - SMK Negeri 1 Wanareja</title>
+	<title>Buku Tamu - SD N 2 Sumber Bahagia</title>
 	<link rel="stylesheet" href="resources/fonts/stylesheet.css">
 	<link rel="stylesheet" href="resources/css/bootstrap.min.css">
 	<link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-	<div class="container bg-light">
+
 		<!-- top bar -->
 		<div class="logo clearfix">
 			<div class="float-left mt-3 mb-3">
@@ -32,7 +32,7 @@ $aktif = 'bukutamu';
 		<div class="row p-3">
 			<div class="col-md-8">
 				<div class="title mb-3">
-					Buku Tamu SMK Negeri 1 Wanareja
+					Buku Tamu SD Negeri 2 Wanareja
 				</div>
 				<div>
 					<form method="POST" action="proses_bukutamu.php">
@@ -57,11 +57,7 @@ $aktif = 'bukutamu';
 			</div>
 			<?php require_once 'sidebar.php'; ?>
 		</div>
-		<div class="text-white footer">
-			2019 © Copyright by Fakhrul Fanani Nugroho.
-		</div>
-	</div>
-
+		<?php require_once 'footer.php'; ?>
 	<script src="resources/js/jquery.js"></script>
 	<script src="resources/js/bootstrap.min.js"></script>
 </body>

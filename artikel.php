@@ -15,8 +15,7 @@ $aktif = 'artikel';
 	<link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-	<div class="container bg-light">
-		<!-- top bar -->
+
 		<div class="logo clearfix">
 			<div class="float-left mt-3 mb-3">
 				<img src="resources/images/logo.png" alt="Logo Sekolah" width="70px" class="float-left mr-3">
@@ -56,10 +55,8 @@ $aktif = 'artikel';
 			</div>
 			<?php require_once 'sidebar.php'; ?>
 		</div>
-		<div class="text-white footer">
-			2019 © Copyright by Fakhrul Fanani Nugroho.
-		</div>
-	</div>
+		
+		<?php require_once 'footer.php'; ?>
 
 	<script src="resources/js/jquery.js"></script>
 	<script src="resources/js/bootstrap.min.js"></script>
