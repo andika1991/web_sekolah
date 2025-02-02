@@ -22,7 +22,6 @@ $base_url = "http://localhost/web_sekolah/"
 				<a class="nav-link <?= $active == 'master' ? 'active' : '' ?> dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Data Master</a>
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="<?= $base_url ?>admin/guru/index.php">Data Guru</a>
-					<a class="dropdown-item" href="<?= $base_url ?>admin/jurusan/index.php">Data Jurusan</a>
 					<a class="dropdown-item" href="<?= $base_url ?>admin/siswa/index.php">Data Siswa</a>
 					<a class="dropdown-item" href="<?= $base_url ?>admin/ekskul/index.php">Data Ekskul</a>
 					<a class="dropdown-item" href="<?= $base_url ?>admin/pengguna/index.php">Data Pengguna</a>

@@ -17,56 +17,55 @@ $no = 1;
 	<link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-	<div class="container bg-light">
-		<!-- top bar -->
-		<div class="logo clearfix">
-			<div class="float-left mt-3 mb-3">
-				<img src="resources/images/logo.png" alt="Logo Sekolah" width="70px" class="float-left mr-3">
-				<div class="text float-right">
-					<span class="smk">SD N 2 Sumber Bahagia</span><br>
-					<span class="visi">Mewujudkan Siswa Berkarakter, Berkompeten dan Unggul.</span>
-				</div>
+	<!-- top bar -->
+	<div class="logo clearfix">
+		<div class="float-left mt-3 mb-3 px-4">
+			<img src="resources/images/logo.png" alt="Logo Sekolah" width="70px" class="float-left mr-3">
+			<div class="text float-right">
+				<span class="smk">SD Negeri 2 Sumber Bahagia</span><br>
+				<span class="visi">Mewujudkan Siswa Berkarakter, Berkompeten dan Unggul.</span>
 			</div>
-		</div>
-			
-		<!-- nav bar -->
-		<?php require_once 'navbar.php'; ?>
-
-		<!-- content -->
-		<div class="row p-3">
-			<div class="col-md-8">
-				<div class="title mb-3">
-					Daftar Siswa
-				</div>
-				<table id="table_id" class="dataTable table table-bordered">
-				    <thead>
-				        <tr>
-				            <th>No</th>
-				            <th width="50px">Foto</th>
-				            <th>Nama</th>
-				            <th>Jurusan</th>
-				            <th>Alamat</th>
-				        </tr>
-				    </thead>
-				    <tbody>
-				       <?php while($row = mysqli_fetch_assoc($query)) : ?>
-				       		<tr>
-				       			<td><?= $no++ ?></td>
-				       			<td><img src="images/siswa/<?= $row['foto'] ?>" alt="<?= $row['nama'] ?>" width="100%" class="img-thumbnail"></td>
-				       			<td><a href="detail_siswa.php?id=<?= $row['id'] ?>"><?= $row['nama'] ?></a></td>
-				       			<td><?= $row['jurusan'] ?></td>
-				       			<td><?= $row['alamat'] ?></td>
-				       		</tr>
-				       <?php endwhile; ?>
-				    </tbody>
-				</table>
-			</div>
-			<?php require 'sidebar.php'; ?>
-		</div>
-		<div class="text-white footer">
-			2019 © Copyright by Fakhrul Fanani Nugroho.
 		</div>
 	</div>
+		
+	<!-- nav bar -->
+	<?php require_once 'navbar.php'; ?>
+
+	<!-- content -->
+	<div class="row p-3">
+		<div class="col-md-8">
+			<div class="title mb-3">
+				Daftar Siswa
+			</div>
+			<table id="table_id" class="dataTable table table-bordered">
+				<thead>
+					<tr>
+						<th>No</th>
+						<th width="50px">Foto</th>
+						<th>Nama</th>
+						<th>Jurusan</th>
+						<th>Alamat</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php while($row = mysqli_fetch_assoc($query)) : ?>
+						<tr>
+							<td><?= $no++ ?></td>
+							<td><img src="images/siswa/<?= $row['foto'] ?>" alt="<?= $row['nama'] ?>" width="100%" class="img-thumbnail"></td>
+							<td><a href="detail_siswa.php?id=<?= $row['id'] ?>"><?= $row['nama'] ?></a></td>
+							<td><?= $row['jurusan'] ?></td>
+							<td><?= $row['alamat'] ?></td>
+						</tr>
+					<?php endwhile; ?>
+				</tbody>
+			</table>
+		</div>
+		<?php require 'sidebar.php'; ?>
+	</div>
+	<div class="text-white footer">
+		2019 © Copyright by Fakhrul Fanani Nugroho.
+	</div>
+
 
 	<script src="resources/js/jquery.js"></script>
 	<script src="resources/js/bootstrap.min.js"></script>

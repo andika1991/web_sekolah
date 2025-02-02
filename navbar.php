@@ -81,7 +81,6 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownProfil">
                     <a class="dropdown-item <?= $aktif == 'siswa' ? 'active' : '' ?>" href="siswa.php">SISWA</a>
                     <a class="dropdown-item <?= $aktif == 'guru' ? 'active' : '' ?>" href="guru.php">GURU</a>
-                    <a class="dropdown-item <?= $aktif == 'jurusan' ? 'active' : '' ?>" href="jurusan.php">JURUSAN</a>
                 </div>
             </li>
             <li class="nav-item">
