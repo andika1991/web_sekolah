@@ -1,7 +1,7 @@
 <?php 
 require_once '../../koneksi.php';
 
-$query = mysqli_query($koneksi, "SELECT tbl_artikel.*, tbl_kategori_artikel.nama_kategori FROM tbl_artikel LEFT JOIN tbl_kategori_artikel ON tbl_artikel.id_kategori = tbl_kategori_artikel.id");
+$query = mysqli_query($koneksi, "SELECT tbl_artikel.*, tbl_kategori_artikel.nama_kategori FROM tbl_artikel LEFT JOIN tbl_kategori_artikel ON tbl_artikel.id_kategori = tbl_kategori_artikel.id ORDER BY tbl_artikel.tanggal DESC");
 $no = 1;
 $active = 'artikel';
 ?>
@@ -10,7 +10,7 @@ $active = 'artikel';
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Data Artikel - SMK Negeri 1 Wanareja</title>
+	<title>Data Artikel - SD N 2 Sumber Bahagia</title>
 	<link rel="stylesheet" href="../../resources/datatables/datatables.min.css">
 	<link rel="stylesheet" href="../../resources/css/bootstrap.min.css">
 </head>

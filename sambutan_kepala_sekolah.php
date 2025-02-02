@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Sambutan Kepala Sekolah - SMK Negeri 1 Wanareja</title>
+	<title>Sambutan Kepala Sekolah - SD N 2 Sumber Bahagia</title>
 	<link rel="stylesheet" href="resources/fonts/stylesheet.css">
 	<link rel="stylesheet" href="resources/css/bootstrap.min.css">
 	<link rel="stylesheet" href="resources/css/style.css">

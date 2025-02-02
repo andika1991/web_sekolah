@@ -10,7 +10,7 @@ $no = 1;
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Daftar Jurusan - SMK Negeri 1 Wanareja</title>
+	<title>Daftar Jurusan - SD N 2 Sumber Bahagia</title>
 	<link rel="stylesheet" href="resources/datatables/datatables.min.css">
 	<link rel="stylesheet" href="resources/fonts/stylesheet.css">
 	<link rel="stylesheet" href="resources/css/bootstrap.min.css">
@@ -23,8 +23,8 @@ $no = 1;
 			<div class="float-left mt-3 mb-3">
 				<img src="resources/images/logo.png" alt="Logo Sekolah" width="70px" class="float-left mr-3">
 				<div class="text float-right">
-					<span class="smk">SMK Negeri 1 Wanareja</span><br>
-					<span class="visi">Mewujudkan SMK Berkarakter, Berkompeten dan Unggul.</span>
+					<span class="smk">SD N 2 Sumber Bahagia</span><br>
+					<span class="visi">Mewujudkan Siswa Berkarakter, Berkompeten dan Unggul.</span>
 				</div>
 			</div>
 		</div>

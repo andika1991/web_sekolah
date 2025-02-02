@@ -10,7 +10,7 @@ $aktif = 'home';
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Home - SMK Negeri 1 Wanareja</title>
+	<title>Home - SD N 2 Sumber Bahagia</title>
 	<link rel="stylesheet" href="resources/fonts/stylesheet.css">
 	<link rel="stylesheet" href="resources/css/bootstrap.min.css">
 	<link rel="stylesheet" href="resources/css/style.css">
@@ -23,7 +23,7 @@ $aktif = 'home';
 				<img src="resources/images/logo.png" alt="Logo Sekolah" width="70px" class="float-left mr-3">
 				<div class="text float-right">
 					<span class="smk">SD N 2 SUMBER BAHAGIA</span><br>
-					<span class="visi">Mewujudkan SMK Berkarakter, Berkompeten dan Unggul.</span>
+					<span class="visi">Mewujudkan Siswa Berkarakter, Berkompeten dan Unggul.</span>
 				</div>
 			</div>
 		</div>
@@ -37,7 +37,7 @@ $aktif = 'home';
 		</div>
 		<div class="sambutan bg-white p-4 mb-4">
     <div class="title mb-3">
-        Selayang Pandang Kepala Sekolah
+        Sambutan epala Sekolah
     </div>
     <div class="row">
         <div class="col-md-3 text-center">
@@ -52,7 +52,7 @@ $aktif = 'home';
             </p>
             <p>
                 Wassalamu'alaikum Warahmatullahi Wabarakatuh,  
-                <br><strong>- Kepala Sekolah SMK Negeri 1 Wanareja</strong>
+                <br><strong>- Kepala Sekolah SD N 2 Sumber Bahagia</strong>
             </p>
         </div>
     </div>
@@ -199,7 +199,7 @@ $aktif = 'home';
             <div class="col-md-5 mb-4">
                 <div class="card shadow-sm p-4 text-center info-card">
                     <i class="fas fa-user-graduate fa-5x text-primary mb-3"></i>
-                    <h2 class="counter display-4" data-target="1200">0</h2>
+                    <h2 class="counter display-4" data-target="1000">0</h2>
                     <p class="text-muted">Siswa Aktif</p>
                 </div>
             </div>

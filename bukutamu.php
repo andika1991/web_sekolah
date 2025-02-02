@@ -19,8 +19,8 @@ $aktif = 'bukutamu';
 			<div class="float-left mt-3 mb-3">
 				<img src="resources/images/logo.png" alt="Logo Sekolah" width="70px" class="float-left mr-3">
 				<div class="text float-right">
-					<span class="smk">SMK Negeri 1 Wanareja</span><br>
-					<span class="visi">Mewujudkan SMK Berkarakter, Berkompeten dan Unggul.</span>
+					<span class="smk">SD N 2 Sumber Bahagia</span><br>
+					<span class="visi">Mewujudkan Siswa Berkarakter, Berkompeten dan Unggul.</span>
 				</div>
 			</div>
 		</div>
@@ -32,7 +32,7 @@ $aktif = 'bukutamu';
 		<div class="row p-3">
 			<div class="col-md-8">
 				<div class="title mb-3">
-					Buku Tamu SD Negeri 2 Wanareja
+					Buku Tamu SD Negeri 2 Sumber Bahagia
 				</div>
 				<div>
 					<form method="POST" action="proses_bukutamu.php">

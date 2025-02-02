@@ -53,7 +53,7 @@ INSERT INTO `tbl_artikel` (`id`, `judul`, `isi`, `tanggal`, `foto`, `id_kategori
 -- Table structure for table `tbl_bukutamu`
 --
 
-CREATE TABLE `tbl_bukutamu` (
+CREATE TABLE `tbl_bukutamu` (sekolahku
   `id` int(11) NOT NULL,
   `nama` varchar(80) DEFAULT NULL,
   `email` varchar(90) DEFAULT NULL,

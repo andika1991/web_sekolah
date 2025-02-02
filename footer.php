@@ -45,7 +45,7 @@
                 <!-- Google Maps Embed -->
                 <div class="mt-3">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.601349056173!2d109.22424391477715!3d-7.826665394365061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sSD%20N%202%20SUMBER%20BAHAGIA!5e0!3m2!1sid!2sid!4v1633072015637!5m2!1sid!2sid" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.564927789799!2d105.42828637461663!3d-4.8655646951101215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e3f61c5750c60c5%3A0x2349dfb672b211da!2sSDN%202%20Sumber%20Bahagia!5e1!3m2!1sen!2sid!4v1738125479251!5m2!1sen!2sid"
                         width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>

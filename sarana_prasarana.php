@@ -7,7 +7,7 @@ $aktif = 'sarana_prasarana';
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Sarana dan Prasarana - SMK Negeri 1 Wanareja</title>
+	<title>Sarana dan Prasarana - SD N 2 Sumber Bahagia</title>
 	<link rel="stylesheet" href="resources/fonts/stylesheet.css">
 	<link rel="stylesheet" href="resources/css/bootstrap.min.css">
 	<link rel="stylesheet" href="resources/css/style.css">
