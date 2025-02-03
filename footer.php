@@ -53,7 +53,7 @@
 
         <!-- Copyright -->
         <div class="text-center mt-4">
-            <p class="mb-0">2019 - <?= date('Y') ?> © SD N 2 SUMBER BAHAGIA. All Rights Reserved.</p>
+            <p class="mb-0">2025 - <?= date('Y') ?> © SD N 2 SUMBER BAHAGIA. All Rights Reserved.</p>
         </div>
     </div>
 </footer>

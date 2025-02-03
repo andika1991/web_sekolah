@@ -36,7 +36,7 @@ $aktif = 'visi_misi';
 		<div class="row p-3">
 			<div class="col-md-8">
 				<div class="title mb-3">
-					Visi dan Misi SMK Negeri 1 Wanareja
+					Visi dan Misi SD N 2 Sumber Bahagia
 				</div>
 				<div class="artikel">
 					<?= $visi_misi['visi_misi'] ?>
@@ -44,9 +44,7 @@ $aktif = 'visi_misi';
 			</div>
 			<?php require_once 'sidebar.php'; ?>
 		</div>
-		<div class="text-white footer">
-			2019 © Copyright by Fakhrul Fanani Nugroho.
-		</div>
+		<?php require_once 'footer.php'; ?>
 	</div>
 
 	<script src="resources/js/jquery.js"></script>

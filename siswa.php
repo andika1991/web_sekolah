@@ -1,7 +1,7 @@
 <?php 
 
 require_once 'koneksi.php';
-$query = mysqli_query($koneksi, "SELECT tbl_siswa.id, tbl_siswa.nama, tbl_siswa.no_hp, tbl_siswa.foto, tbl_siswa.alamat, tbl_jurusan.nama_jurusan AS jurusan FROM tbl_siswa LEFT JOIN tbl_jurusan ON tbl_siswa.id_jurusan = tbl_jurusan.id");
+$query = mysqli_query($koneksi, "SELECT id, nama, jenis_kelamin, foto, alamat FROM tbl_siswa");
 $aktif = 'siswa';
 $no = 1;
 ?>
@@ -43,7 +43,7 @@ $no = 1;
 						<th>No</th>
 						<th width="50px">Foto</th>
 						<th>Nama</th>
-						<th>Jurusan</th>
+						<th>Jenis Kelamin</th>
 						<th>Alamat</th>
 					</tr>
 				</thead>
@@ -53,7 +53,7 @@ $no = 1;
 							<td><?= $no++ ?></td>
 							<td><img src="images/siswa/<?= $row['foto'] ?>" alt="<?= $row['nama'] ?>" width="100%" class="img-thumbnail"></td>
 							<td><a href="detail_siswa.php?id=<?= $row['id'] ?>"><?= $row['nama'] ?></a></td>
-							<td><?= $row['jurusan'] ?></td>
+							<td><?= $row['jenis_kelamin'] ?></td>
 							<td><?= $row['alamat'] ?></td>
 						</tr>
 					<?php endwhile; ?>
@@ -62,9 +62,7 @@ $no = 1;
 		</div>
 		<?php require 'sidebar.php'; ?>
 	</div>
-	<div class="text-white footer">
-		2019 © Copyright by Fakhrul Fanani Nugroho.
-	</div>
+	<?php require_once 'footer.php'; ?>
 
 
 	<script src="resources/js/jquery.js"></script>

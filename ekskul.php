@@ -59,9 +59,7 @@ $no = 1;
 			</div>
 			<?php require 'sidebar.php'; ?>
 		</div>
-		<div class="text-white footer">
-			2019 © Copyright by Fakhrul Fanani Nugroho.
-		</div>
+		<?php require_once 'footer.php'; ?>
 	</div>
 
 	<script src="resources/js/jquery.js"></script>

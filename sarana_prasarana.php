@@ -33,7 +33,7 @@ $aktif = 'sarana_prasarana';
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="resources/images/kelas.jpg" class="card-img-top" alt="Ruang Kelas">
+                    <img src="resources/images/r_kelas.jpg" class="card-img-top" alt="Ruang Kelas">
                     <div class="card-body">
                         <h5 class="card-title">Ruang Kelas</h5>
                         <p class="card-text">Ruang kelas yang nyaman dan kondusif untuk belajar.</p>
@@ -42,7 +42,7 @@ $aktif = 'sarana_prasarana';
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="resources/images/perpustakaan.jpg" class="card-img-top" alt="Perpustakaan">
+                    <img src="resources/images/r_perpus.jpg" class="card-img-top" alt="Perpustakaan">
                     <div class="card-body">
                         <h5 class="card-title">Perpustakaan</h5>
                         <p class="card-text">Perpustakaan dengan koleksi buku yang lengkap.</p>

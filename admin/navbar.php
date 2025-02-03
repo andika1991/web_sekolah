@@ -31,6 +31,9 @@ $base_url = "http://localhost/web_sekolah/"
 				<a class="nav-link <?= $active == 'visi_misi' ? 'active' : '' ?> " href="<?= $base_url ?>admin/visi_misi.php">Visi Misi</a>
 			</li>
 			<li class="nav-item">
+				<a class="nav-link <?= $active == 'ppdb' ? 'active' : '' ?> " href="<?= $base_url ?>admin/ppdb.php">PPDB</a>
+			</li>
+			<li class="nav-item">
 				<a class="nav-link <?= $active == 'bukutamu' ? 'active' : '' ?> " href="<?= $base_url ?>admin/bukutamu.php">Bukutamu</a>
 			</li>
 			<li class="nav-item">

@@ -86,6 +86,9 @@
             <li class="nav-item">
                 <a class="nav-link <?= $aktif == 'ekskul' ? 'active' : '' ?>" href="ekskul.php">EKSKUL</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link <?= $aktif == 'ppdb' ? 'active' : '' ?>" href="ppdb.php">PPDB</a>
+            </li>
             
         </ul>
     </div>

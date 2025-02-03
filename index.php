@@ -1,8 +1,8 @@
 <?php 
 
 require_once 'koneksi.php';
-$query = mysqli_query($koneksi, "SELECT * FROM tbl_artikel");
-$queryPrestasi = mysqli_query($koneksi, "SELECT * FROM tbl_artikel WHERE id_kategori = '12' LIMIT 5");
+$query = mysqli_query($koneksi, "SELECT * FROM tbl_artikel ORDER BY tanggal DESC");
+$queryPrestasi = mysqli_query($koneksi, "SELECT * FROM tbl_artikel WHERE id_kategori = '12' ORDER BY tanggal DESC LIMIT 5");
 $aktif = 'home';
 ?>
 <!DOCTYPE html>

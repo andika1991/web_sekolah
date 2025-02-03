@@ -4,7 +4,7 @@ require_once 'koneksi.php';
 if(!isset($_GET['id']) || $_GET['id'] == '') header('Location: index.php');
 
 $id = $_GET['id'];
-$query = mysqli_query($koneksi, "SELECT tbl_siswa.*, tbl_jurusan.nama_jurusan FROM tbl_siswa LEFT JOIN tbl_jurusan ON tbl_siswa.id_jurusan = tbl_jurusan.id WHERE tbl_siswa.id = $id");
+$query = mysqli_query($koneksi, "SELECT* FROM tbl_siswa WHERE id = $id");
 
 $row = mysqli_fetch_assoc($query);
 $aktif = 'siswa';
@@ -62,19 +62,9 @@ $aktif = 'siswa';
 								</td>
 							</tr>
 							<tr>
-								<td><b>No Handphone</b></td>
-								<td>:</td>
-								<td><?= $row['no_hp'] ?></td>
-							</tr>
-							<tr>
 								<td><b>Tempat Tanggal Lahir</b></td>
 								<td>:</td>
 								<td><?= $row['tempat_lahir'] ?>, <?= $row['tanggal_lahir'] ?></td>
-							</tr>
-							<tr>
-								<td><b>Jurusan</b></td>
-								<td>:</td>
-								<td><?= $row['nama_jurusan'] ?></td>
 							</tr>
 							<tr>
 								<td><b>Alamat</b></td>
@@ -95,9 +85,7 @@ $aktif = 'siswa';
 			</div>
 			<?php require 'sidebar.php'; ?>
 		</div>
-		<div class="text-white footer">
-			2019 © Copyright by Fakhrul Fanani Nugroho.
-		</div>
+		<?php require_once 'footer.php'; ?>
 	</div>
 
 	<script src="resources/js/jquery.js"></script>
