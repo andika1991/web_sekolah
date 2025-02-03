@@ -21,7 +21,7 @@ $aktif = 'siswa';
 	<link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-	<div class="container bg-light">
+	
 		<!-- top bar -->
 		<div class="logo clearfix">
 			<div class="float-left mt-3 mb-3 px-4">
@@ -86,7 +86,6 @@ $aktif = 'siswa';
 			<?php require 'sidebar.php'; ?>
 		</div>
 		<?php require_once 'footer.php'; ?>
-	</div>
 
 	<script src="resources/js/jquery.js"></script>
 	<script src="resources/js/bootstrap.min.js"></script>

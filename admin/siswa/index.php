@@ -1,7 +1,7 @@
 <?php 
 require_once '../../koneksi.php';
 
-$query = mysqli_query($koneksi, "SELECT tbl_siswa.id, tbl_siswa.nama, tbl_siswa.no_hp, tbl_siswa.foto, tbl_siswa.alamat, tbl_jurusan.nama_jurusan AS jurusan FROM tbl_siswa LEFT JOIN tbl_jurusan ON tbl_siswa.id_jurusan = tbl_jurusan.id");
+$query = mysqli_query($koneksi, "SELECT id, nama, jenis_kelamin, foto, alamat	 FROM tbl_siswa");
 $no = 1;
 $active = 'master';
 ?>
@@ -54,8 +54,7 @@ $active = 'master';
 						            <th>No</th>
 						            <th width="50px">Foto</th>
 						            <th>Nama</th>
-						            <th>No HP</th>
-						            <th>Jurusan</th>
+						            <th>Jenis Kelamin</th>
 						            <th>Alamat</th>
 						            <th>Aksi</th>
 						        </tr>
@@ -66,8 +65,7 @@ $active = 'master';
 						       			<td><?= $no++ ?></td>
 						       			<td><img src="../../images/siswa/<?= $row['foto'] ?>" alt="<?= $row['nama'] ?>" width="100%" class="img-thumbnail"></td>
 						       			<td><a href="detail.php?id=<?= $row['id'] ?>"><?= $row['nama'] ?></a></td>
-						       			<td><?= $row['no_hp'] ?></td>
-						       			<td><?= $row['jurusan'] ?></td>
+						       			<td><?= $row['jenis_kelamin'] ?></td>
 						       			<td><?= $row['alamat'] ?></td>
 						       			<td>
 						       				<a href="ubah.php?id=<?= $row['id'] ?>" class="btn btn-success btn-sm">Ubah</a>
