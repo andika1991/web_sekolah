@@ -5,7 +5,6 @@ if(!isset($_GET['id']) || $_GET['id'] == '') header('Location: index.php');
 require_once '../../koneksi.php';
 $id = $_GET['id'];
 $query = mysqli_query($koneksi, "SELECT * FROM tbl_siswa WHERE id = $id");
-$query_jurusan = mysqli_query($koneksi, "SELECT * FROM tbl_jurusan");
 $siswa = mysqli_fetch_assoc($query);
 
 $active = 'master'; 
@@ -54,12 +53,7 @@ $active = 'master';
 										</select>
 									</div>
 								</div>
-								<div class="col">
-									<div class="form-group">
-										<label for="no_hp">No HP</label>
-										<input type="text" value="<?= $siswa['no_hp'] ?>" class="form-control" id="no_hp" placeholder="no hp" autocomplete="off" required="required" name="no_hp">
-									</div>
-								</div>
+								
 							</div>
 							<div class="row">
 								<div class="col">
@@ -84,16 +78,7 @@ $active = 'master';
 									*foto sebelumnya <br>
 									<img src="../../images/siswa/<?= $siswa['foto'] ?>" alt="" width="20%" class="img-thumbnail mt-2">
 								</div>
-								<div class="col">
-									<div class="form-group">
-										<label for="Jurusan">Jurusan</label>
-										<select name="id_jurusan" id="jurusan" class="form-control">
-											<?php while($row = mysqli_fetch_assoc($query_jurusan)) : ?>
-												<option value="<?= $row['id'] ?>"><?= $row['nama_jurusan'] ?></option>
-											<?php endwhile; ?>
-										</select>
-									</div>
-								</div>
+								
 							</div>
 							<div class="form-group">
 								<label for="alamat">Alamat</label>

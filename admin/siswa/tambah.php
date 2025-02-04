@@ -2,8 +2,6 @@
 
 require_once '../../koneksi.php';
 
-$query = mysqli_query($koneksi, "SELECT id, nama_jurusan FROM tbl_jurusan");
-
 $active = 'master'; 
 
 ?>
@@ -51,12 +49,6 @@ $active = 'master';
 										</select>
 									</div>
 								</div>
-								<div class="col">
-									<div class="form-group">
-										<label for="no_hp">No HP</label>
-										<input type="text" class="form-control" id="no_hp" placeholder="no hp" autocomplete="off" required="required" name="no_hp">
-									</div>
-								</div>
 							</div>
 							<div class="row">
 								<div class="col">
@@ -77,16 +69,6 @@ $active = 'master';
 									<div class="form-group">
 										<label for="foto">Foto</label>
 										<input type="file" class="form-control-file" id="foto" autocomplete="off" required="required" name="foto">
-									</div>
-								</div>
-								<div class="col">
-									<div class="form-group">
-										<label for="Jurusan">Jurusan</label>
-										<select name="id_jurusan" id="jurusan" class="form-control">
-											<?php while($row = mysqli_fetch_assoc($query)) : ?>
-												<option value="<?= $row['id'] ?>"><?= $row['nama_jurusan'] ?></option>
-											<?php endwhile; ?>
-										</select>
 									</div>
 								</div>
 							</div>

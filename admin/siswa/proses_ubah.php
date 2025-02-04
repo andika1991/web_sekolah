@@ -7,10 +7,8 @@ require_once '../../koneksi.php';
 $nama = mysqli_real_escape_string($koneksi, isset($_POST['nama']) ? $_POST['nama'] : '');
 $nis = mysqli_real_escape_string($koneksi, isset($_POST['nis']) ? $_POST['nis'] : '');
 $jenis_kelamin = mysqli_real_escape_string($koneksi, isset($_POST['jenis_kelamin']) ? $_POST['jenis_kelamin'] : '');
-$no_hp = mysqli_real_escape_string($koneksi, isset($_POST['no_hp']) ? $_POST['no_hp'] : '');
 $tempat_lahir = mysqli_real_escape_string($koneksi, isset($_POST['tempat_lahir']) ? $_POST['tempat_lahir'] : '');
 $tanggal_lahir = mysqli_real_escape_string($koneksi, isset($_POST['tanggal_lahir']) ? $_POST['tanggal_lahir'] : '');
-$id_jurusan = mysqli_real_escape_string($koneksi, isset($_POST['id_jurusan']) ? $_POST['id_jurusan'] : '');
 $alamat = mysqli_real_escape_string($koneksi, isset($_POST['alamat']) ? $_POST['alamat'] : '');
 $id = $_GET['id'];
 
@@ -41,7 +39,7 @@ if($_FILES['foto']['error'] == 0){
 		move_uploaded_file($asal, $tujuan . $nama_foto) or die('gagal upload foto');
 
 		// ubah data
-		$query = mysqli_query($koneksi, "UPDATE tbl_siswa SET nama = '$nama', nis = $nis, jenis_kelamin = '$jenis_kelamin', tempat_lahir = '$tempat_lahir', tanggal_lahir = '$tanggal_lahir', alamat = '$alamat', foto = '$nama_foto', id_jurusan = $id_jurusan WHERE id = $id") or die(mysqli_error($koneksi));
+		$query = mysqli_query($koneksi, "UPDATE tbl_siswa SET nama = '$nama', nis = $nis, jenis_kelamin = '$jenis_kelamin', tempat_lahir = '$tempat_lahir', tanggal_lahir = '$tanggal_lahir', alamat = '$alamat', foto = '$nama_foto' WHERE id = $id") or die(mysqli_error($koneksi));
 		if($query){
 			$_SESSION['sukses'] = 'Data Berhasil Diubah!';
 			header('Location: index.php');
@@ -54,7 +52,7 @@ if($_FILES['foto']['error'] == 0){
 		header('Location: index.php');
 	}
 } else {
-	$query = mysqli_query($koneksi, "UPDATE tbl_siswa SET nama = '$nama', nis = $nis, jenis_kelamin = '$jenis_kelamin', tempat_lahir = '$tempat_lahir', tanggal_lahir = '$tanggal_lahir', alamat = '$alamat', foto = '$nama_foto', id_jurusan = $id_jurusan WHERE id = $id") or die(mysqli_error($koneksi));
+	$query = mysqli_query($koneksi, "UPDATE tbl_siswa SET nama = '$nama', nis = $nis, jenis_kelamin = '$jenis_kelamin', tempat_lahir = '$tempat_lahir', tanggal_lahir = '$tanggal_lahir', alamat = '$alamat', foto = '$nama_foto' WHERE id = $id") or die(mysqli_error($koneksi));
 
 	if($query){
 			$_SESSION['sukses'] = 'Data Berhasil Diubah!';
